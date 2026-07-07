@@ -296,6 +296,10 @@ body::before {
   width: 100%;
 }
 
+.instagram-embed a[href*="elfsight.com/instagram-feed-instashow/"] {
+  display: none !important;
+}
+
 .instagram-header {
   margin-bottom: 16px;
 }
@@ -384,7 +388,7 @@ body::before {
   border-color: rgba(255, 255, 255, 0.8);
   color: #ffffff;
   position: relative;
-  top: 5px;
+  top: 7px;
 }
 
 .site-footer .icon svg {
