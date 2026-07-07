@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fundacion MP</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,11 +23,10 @@
 
   <nav class="navbar">
     <div class="logo">
-      <span class="logo-dot"></span> Fundacion MP
+      <img src="media/Asset 6.svg" alt="Fundacion MP logo" class="logo-mark"> Fundacion MP
     </div>
-    
-    <div class="burger-wrapper" id="open-menu-btn">
-      <div class="nav-curve"></div>
+
+    <div class="burger-wrapper" id="open-menu-btn" role="button" tabindex="0" aria-label="Open menu">
       <div class="burger-content">
         <div class="lines">
           <span></span>
@@ -35,11 +34,6 @@
           <span></span>
         </div>
         <div class="hover-text">Menu</div>
-        <div class="hanging-decor">
-          <span class="drop"></span>
-          <span class="drop"></span>
-          <span class="drop"></span>
-        </div>
       </div>
     </div>
 
@@ -51,9 +45,15 @@
     <h2>Lorem ipsum</h2>
   </main>
 
+  <section class="instagram-section">
+    <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-b3740540-395f-4325-8811-3b8ed9b2e963 instagram-embed" data-elfsight-app-lazy></div>
+  </section>
+
   <div class="menu-overlay" id="menu-overlay">
     <div class="menu-header">
-      <div class="logo"><span class="logo-dot"></span> Fundacion MP</div>
+      <div class="logo"><img src="media/Asset 6.svg" alt="Fundacion MP logo" class="logo-mark"> Fundacion MP</div>
       <a href="#" class="donate-btn">Donate</a>
     </div>
 
@@ -70,23 +70,54 @@
     </div>
 
     <div class="social-icons">
-      <div class="icon">f</div>
-      <div class="icon">𝕏</div>
-      <div class="icon">in</div>
+      <a class="icon icon-facebook" href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M13.5 22v-8.1h2.7l.4-3.1h-3.1V8.9c0-.9.2-1.6 1.6-1.6h1.7V4.5c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.7v1.8H7v3.1h2.6V22h3.9z"/>
+        </svg>
+      </a>
+      <a class="icon icon-instagram" href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm5.6-2.4a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z"/>
+        </svg>
+      </a>
     </div>
 
     <div class="close-wrapper" id="close-menu-btn">
       <div class="close-curve"></div>
       <div class="close-content">
-        <div class="hanging-decor">
-          <span class="drop"></span>
-          <span class="drop"></span>
-          <span class="drop"></span>
+        <div class="close-lines">
+          <span></span>
+          <span></span>
         </div>
-        <div class="close-text">close</div>
+        <div class="close-text">Close</div>
       </div>
     </div>
   </div>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="media/Asset 6.svg" alt="Fundacion MP logo" class="footer-logo">
+      <div class="footer-name">Fundacion MP</div>
+    </div>
+
+    <div class="footer-links">
+      <a href="#">Donate</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="social-icons footer-social">
+      <a class="icon icon-facebook" href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M13.5 22v-8.1h2.7l.4-3.1h-3.1V8.9c0-.9.2-1.6 1.6-1.6h1.7V4.5c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.7v1.8H7v3.1h2.6V22h3.9z"/>
+        </svg>
+      </a>
+      <a class="icon icon-instagram" href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm5.6-2.4a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
