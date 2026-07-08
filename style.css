@@ -463,6 +463,9 @@ body::before {
   flex-direction: column;
   padding: 18px 40px 24px;
   transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -482,6 +485,9 @@ body::before {
 
 .menu-overlay.active {
   transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .menu-overlay:not(.active) .close-wrapper {
@@ -589,25 +595,33 @@ body::before {
     padding-right: 18px;
   }
 
+  .navbar {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 10px;
+  }
+
   .burger-wrapper,
   .close-wrapper {
-    width: 112px;
-    flex-basis: 112px;
-    height: 68px;
+    width: 44px;
+    flex-basis: 44px;
+    height: 34px;
   }
 
   .logo {
-    font-size: 1.15rem;
-    gap: 8px;
+    font-size: 0.95rem;
+    gap: 6px;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .logo-mark {
-    width: 32px;
+    width: 28px;
   }
 
   .donate-btn {
-    font-size: 1.1rem;
-    padding: 7px 12px 9px;
+    font-size: 0.95rem;
+    padding: 6px 10px 7px;
+    justify-self: end;
   }
 
   .menu-overlay {
@@ -618,8 +632,17 @@ body::before {
   }
 
   .burger-wrapper {
-    width: 48px;
+    width: 44px;
     height: 34px;
+    justify-self: end;
+  }
+
+  .burger-wrapper {
+    grid-column: 3;
+  }
+
+  .donate-btn {
+    grid-column: 2;
   }
 
   .nav-curve,
@@ -628,22 +651,18 @@ body::before {
     top: -20px;
   }
 
-  .burger-content,
-  .close-content {
-    margin-top: 24px;
-  }
-
   .burger-content {
     margin-top: 0;
   }
 
   .menu-links {
-    margin-top: 28px;
-    gap: 36px;
+    margin-top: 24px;
+    gap: 24px;
   }
 
   .col a {
-    font-size: 2rem;
+    font-size: 0.98rem;
+    white-space: nowrap;
   }
 
   .social-icons {
@@ -685,12 +704,27 @@ body::before {
   }
 
   .footer-social {
+    display: flex;
     justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    width: auto;
   }
 
   .footer-links {
     gap: 14px;
     flex-wrap: wrap;
+  }
+
+  .site-footer .icon {
+    top: 0;
+  }
+
+  .site-footer .icon,
+  .site-footer .icon svg {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
   }
 
   .footer-name {
