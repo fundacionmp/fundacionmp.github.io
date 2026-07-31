@@ -1,124 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fundacion MP</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Maggie Paul | Solidaridad y Ayuda Real</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="blob-container">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-    <div class="blob b4"></div>
-    <div class="blob b5"></div>
-    <div class="dot d1"></div>
-    <div class="dot d2"></div>
-    <div class="dot d3"></div>
-    <div class="dot d4"></div>
-  </div>
-
-  <nav class="navbar">
-    <div class="logo">
-      <img src="media/Asset%206.svg" alt="Fundacion MP logo" class="logo-mark"> Fundacion MP
-    </div>
-
-    <div class="burger-wrapper" id="open-menu-btn" role="button" tabindex="0" aria-label="Open menu">
-      <div class="burger-content">
-        <div class="lines">
-          <span></span>
-          <span></span>
-          <span></span>
+    <!-- Navegación con altura expandida inicial -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="media/Asset%206.svg" alt="Logo Fundación Maggie Paul" class="logo-img">
+                <div>Fundación <span>Maggie Paul</span></div>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            <nav id="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#que-hacemos">Programas</a>
+                <a href="#impacto">Impacto</a>
+                <a href="#contacto" class="btn-nav">Contacto</a>
+            </nav>
         </div>
-        <div class="hover-text">Menu</div>
-      </div>
-    </div>
+    </header>
 
-    <a href="#" class="donate-btn">Donate</a>
-  </nav>
-
-  <main class="hero">
-    <h1>Place holder</h1>
-    <h2>Lorem ipsum</h2>
-  </main>
-
-  <section class="instagram-section">
-    <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-b3740540-395f-4325-8811-3b8ed9b2e963 instagram-embed" data-elfsight-app-lazy></div>
-  </section>
-
-  <div class="menu-overlay" id="menu-overlay">
-    <div class="menu-header">
-      <div class="logo"><img src="media/Asset%206.svg" alt="Fundacion MP logo" class="logo-mark"> Fundacion MP</div>
-      <a href="#" class="donate-btn">Donate</a>
-    </div>
-
-    <div class="menu-links">
-      <div class="col">
-        <a href="#">About us</a>
-        <a href="#">Our work</a>
-        <a href="#">Our partners</a>
-      </div>
-      <div class="col">
-        <a href="#">Support us</a>
-        <a href="#">Contact us</a>
-      </div>
-    </div>
-
-    <div class="social-icons">
-      <a class="icon icon-facebook" href="#" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M13.5 22v-8.1h2.7l.4-3.1h-3.1V8.9c0-.9.2-1.6 1.6-1.6h1.7V4.5c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.7v1.8H7v3.1h2.6V22h3.9z"/>
-        </svg>
-      </a>
-      <a class="icon icon-instagram" href="#" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm5.6-2.4a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z"/>
-        </svg>
-      </a>
-    </div>
-
-    <div class="close-wrapper" id="close-menu-btn">
-      <div class="close-curve"></div>
-      <div class="close-content">
-        <div class="close-lines">
-          <span></span>
-          <span></span>
+    <!-- HOME / Hero Section con la imagen ubicada en la ruta local especificada -->
+    <section id="inicio" class="hero hero-with-bg">
+        <div class="container hero-content-left fade-in">
+            <h1>Transformamos la solidaridad en <span class="accent-italic">ayuda real</span> para las familias vulnerables.</h1>
+            <p class="hero-subtitle">Trabajamos cada día para que más niños puedan estudiar, más madres tengan oportunidades y más familias recuperen la <span class="accent-italic">esperanza</span>.</p>
+            <div class="hero-buttons">
+                <a href="#ayudar" class="btn btn-primary">Donar Ahora</a>
+                <a href="#ayudar" class="btn btn-secondary">Ser Voluntario</a>
+                <a href="#contacto" class="btn btn-outline-light">Solicitar Ayuda</a>
+            </div>
+            
+            <div class="card hero-stats fade-in">
+                <div class="stat-item"><span class="counter" data-target="19">0</span><p>Años de servicio</p></div>
+                <div class="stat-item"><span class="counter" data-target="5000">0</span>+<p>Beneficiados</p></div>
+                <div class="stat-item"><span class="counter" data-target="150">0</span>+<p>Jornadas</p></div>
+                <div class="stat-item"><span class="counter" data-target="25">0</span><p>Alianzas</p></div>
+            </div>
         </div>
-        <div class="close-text">Close</div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <footer class="site-footer">
-    <div class="footer-brand">
-      <img src="media/Asset%206.svg" alt="Fundacion MP logo" class="footer-logo">
-      <div class="footer-name">Fundacion MP</div>
-    </div>
+    <!-- PÚBLICOS OBJETIVOS -->
+    <section id="publicos" class="section">
+        <div class="container grid-3">
+            <div class="card public-card fade-in">
+                <div class="icon-wrapper blue">✋</div>
+                <h3 class="sans-heading">Necesito ayuda</h3>
+                <p>Información sobre nuestros programas y cómo solicitar apoyo para ti o tu comunidad.</p>
+                <a href="#contacto" class="btn-text">Saber más →</a>
+            </div>
+            <div class="card public-card featured fade-in">
+                <div class="icon-wrapper yellow">💛</div>
+                <h3 class="sans-heading">Quiero ayudar</h3>
+                <p>Donaciones, voluntariado y recolección de insumos. Tu aporte <span class="accent-italic">cambia vidas</span>.</p>
+                <a href="#ayudar" class="btn-text">Sumarme →</a>
+            </div>
+            <div class="card public-card fade-in">
+                <div class="icon-wrapper red">🤝</div>
+                <h3 class="sans-heading">Quiero ser aliado</h3>
+                <p>Espacio para empresas, organizaciones y fundaciones interesadas en colaborar.</p>
+                <a href="#contacto" class="btn-text">Contactar →</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="footer-links">
-      <a href="#">Donate</a>
-      <a href="#">Contact</a>
-    </div>
+    <!-- QUIÉNES SOMOS -->
+    <section id="nosotros" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Quiénes Somos</h2>
+            
+            <div class="card single-card-layout fade-in mt-4">
+                <div class="nosotros-text">
+                    <h3 class="sans-heading">Nuestra historia</h3>
+                    <p>La Fundación Maggie Paul nació en 2007 como una iniciativa de <span class="accent-italic">responsabilidad social</span> de la empresa familiar Maggie Paul C.A., con el propósito de brindar apoyo a niños, adolescentes y familias en situación de vulnerabilidad.</p>
+                    
+                    <h3 class="sans-heading mt-4">Nuestro propósito</h3>
+                    <p>Fortalecer comunidades mediante programas sociales que promuevan la educación, la salud, la alimentación, el desarrollo humano y la <span class="accent-italic">esperanza</span>.</p>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="valores">
+                    <h3 class="sans-heading blue-text">Nuestros valores</h3>
+                    <ul class="valores-lista-clean">
+                        <li><span class="val-icon">❤️</span> Solidaridad</li>
+                        <li><span class="val-icon">🤝</span> Compromiso</li>
+                        <li><span class="val-icon">⭐</span> Transparencia</li>
+                        <li><span class="val-icon">👨‍👩‍👧‍👦</span> Respeto</li>
+                        <li><span class="val-icon">🙏</span> Servicio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="social-icons footer-social">
-      <a class="icon icon-facebook" href="#" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M13.5 22v-8.1h2.7l.4-3.1h-3.1V8.9c0-.9.2-1.6 1.6-1.6h1.7V4.5c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.7v1.8H7v3.1h2.6V22h3.9z"/>
-        </svg>
-      </a>
-      <a class="icon icon-instagram" href="#" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm5.6-2.4a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z"/>
-        </svg>
-      </a>
-    </div>
-  </footer>
+    <!-- QUÉ HACEMOS -->
+    <section id="que-hacemos" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Qué Hacemos</h2>
+            <div class="cards-grid mt-4">
+                <div class="card fade-in">
+                    <div class="card-icon blue-text">🧒</div>
+                    <h3 class="sans-heading">Niñez</h3>
+                    <ul>
+                        <li>📚 Educación</li>
+                        <li>🎒 Útiles escolares y calzado</li>
+                        <li>👕 Ropa</li>
+                        <li>🍎 Alimentación y Deportes</li>
+                        <li>❤️ Salud</li>
+                    </ul>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon yellow-text">👨‍👩‍👧‍👦</div>
+                    <h3 class="sans-heading">Familias</h3>
+                    <ul>
+                        <li>🍲 Alimentos</li>
+                        <li>💊 Medicinas</li>
+                        <li>🛏️ Equipamiento básico</li>
+                        <li>👩‍👧 Atención a madres</li>
+                    </ul>
+                </div>
+                <div class="card fade-in">
+                    <div class="card-icon blue-text">🛠️</div>
+                    <h3 class="sans-heading">Capacitación</h3>
+                    <ul>
+                        <li>👩‍🍳 Cocina y repostería</li>
+                        <li>🧵 Costura y bordado</li>
+                        <li>💼 Emprendimiento</li>
+                    </ul>
+                </div>
+                <div class="card card-alert fade-in">
+                    <div class="card-icon red-text">🚨</div>
+                    <h3 class="sans-heading">Atención en Emergencias</h3>
+                    <p>Cuando comunidades enfrentan desastres naturales, organizamos campañas operativas inmediatas para recolectar y distribuir <span class="accent-italic">ayuda humanitaria</span> coordinada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- NUESTRO IMPACTO -->
+    <section id="impacto" class="section">
+        <div class="container text-center">
+            <h2 class="section-title fade-in">Así Ayudamos</h2>
+            <p class="subtitle fade-in">Desde 2007 sirviendo a Venezuela. Nuestra ayuda en acción:</p>
+            
+            <section class="instagram-section fade-in">
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-b3740540-395f-4325-8811-3b8ed9b2e963 instagram-embed" data-elfsight-app-lazy></div>
+            </section>
+
+            <div class="card impacto-lista fade-in mt-4">
+                <p class="font-semibold text-sans">Durante estos años hemos desarrollado con éxito:</p>
+                <div class="check-grid">
+                    <span>✔️ Entrega de alimentos</span>
+                    <span>✔️ Donación de medicinas</span>
+                    <span>✔️ Atención a niños</span>
+                    <span>✔️ Apoyo escolar</span>
+                    <span>✔️ Formación para madres</span>
+                    <span>✔️ Ayuda humanitaria</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO AYUDAR -->
+    <section id="ayudar" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Cómo Ayudar</h2>
+            <div class="grid-2 mt-4">
+                <div class="card ayuda-card highlight fade-in">
+                    <div class="icon-wrapper blue">💙</div>
+                    <h3 class="sans-heading">Dona</h3>
+                    <p>Tu aporte permite llevar alimentos, medicinas y <span class="accent-italic">esperanza</span> a quienes más lo necesitan hoy.</p>
+                    <button class="btn btn-primary mt-2">Hacer donativo</button>
+                </div>
+                <div class="card ayuda-card fade-in">
+                    <div class="icon-wrapper yellow">🤝</div>
+                    <h3 class="sans-heading">Hazte voluntario</h3>
+                    <p>Comparte tu tiempo, conocimiento y talento en nuestras jornadas operativas.</p>
+                    <button class="btn btn-secondary mt-2">Inscribirme</button>
+                </div>
+                <div class="card ayuda-card fade-in">
+                    <div class="icon-wrapper gray">📦</div>
+                    <h3 class="sans-heading">Dona productos</h3>
+                    <p>Recibimos: Alimentos no perecederos, Medicinas, Útiles escolares, Ropa e Higiene.</p>
+                    <button class="btn btn-outline mt-2">Ver centros de acopio</button>
+                </div>
+                <div class="card ayuda-card fade-in">
+                    <div class="icon-wrapper red">🏢</div>
+                    <h3 class="sans-heading">Empresas Aliadas</h3>
+                    <p>Invitamos a empresas y organizaciones a desarrollar programas conjuntos de <span class="accent-italic">impacto social</span>.</p>
+                    <button class="btn btn-outline mt-2">Contactar alianzas</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO / FOOTER -->
+    <footer id="contacto" class="contact-footer-section">
+        <div class="container">
+            <div class="contact-footer-grid fade-in">
+                
+                <div class="contact-info-col">
+                    <div class="section-label-dark">
+                        <span class="label-line-dark"></span> CONTACTO Y ALIANZAS
+                    </div>
+                    <h2 class="contact-main-title">Hagamos algo significativo <span class="accent-italic-light">juntos.</span></h2>
+                    <p class="contact-desc">Si necesitas apoyo, deseas ofrecer una alianza o tienes una idea para un taller, queremos escucharte.</p>
+                    
+                    <ul class="contact-details-list">
+                        <li>
+                            <span class="c-icon">✉️</span> 
+                            <a href="mailto:fundacionmaggiepaul@gmail.com">fundacionmaggiepaul@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="c-icon">📱</span> 
+                            <a href="tel:+584144326370">+58 414-4326370</a>
+                        </li>
+                        <li>
+                            <span class="c-icon">📍</span> 
+                            <span>Municipio Los Guayos, Carabobo</span>
+                        </li>
+                    </ul>
+
+                    <div class="footer-social-buttons">
+                        <a href="https://www.instagram.com/fundacion.mp" target="_blank" class="social-pill-btn btn-ig">
+                            <svg class="pill-svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm5.6-2.4a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z"/></svg>
+                            Instagram
+                        </a>
+                        <a href="https://wa.link/q6tnxs" target="_blank" class="social-pill-btn btn-wa">
+                            <svg class="pill-svg" viewBox="0 0 24 24"><path fill="currentColor" d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                            Chat WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card contact-form-card">
+                    <form id="email-contact-form" class="contact-form-layout">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">NOMBRE COMPLETO</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">CORREO ELECTRÓNICO</label>
+                                <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">TELÉFONO</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+58 000-000.0000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivo">MOTIVO DEL MENSAJE</label>
+                            <select id="motivo" name="motivo" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="Necesito apoyo">Necesito apoyo</option>
+                                <option value="Quiero ser aliado">Quiero ser aliado</option>
+                                <option value="Quiero ser voluntario">Quiero ser voluntario</option>
+                                <option value="Otro motivo">Otro motivo</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">MENSAJE</label>
+                            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntanos cómo podemos ayudarte..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit-full">Enviar por Correo →</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom-bar">
+                <p>© 2026 Fundación Maggie Paul. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
