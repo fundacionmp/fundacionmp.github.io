@@ -171,14 +171,14 @@ header.scrolled .logo-img {
     height: 40px;
 }
 
-/* Hero con imagen local y contenido movido un poco más hacia la derecha (margin-left: 8%) */
+/* Hero con imagen referenciada desde la carpeta media y contenido desplazado a la izquierda */
 .hero-with-bg {
     min-height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    background-image: linear-gradient(to right, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.45) 60%, rgba(15, 23, 42, 0.1) 100%), url('C:/Users/oscar/Desktop/Tia Gemini/media/Smiling schoolgirl with embroidered backpack.png');
+    background-image: linear-gradient(to right, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.45) 60%, rgba(15, 23, 42, 0.1) 100%), url('media/Smiling%20schoolgirl%20with%20embroidered%20backpack.png');
     background-size: cover;
     background-position: center;
     padding-top: 150px;
@@ -188,7 +188,7 @@ header.scrolled .logo-img {
 
 .hero-content-left {
     max-width: 650px;
-    margin-left: 8%; /* Movido un poco más a la derecha, manteniéndose del lado izquierdo */
+    margin-left: 8%;
     text-align: left;
 }
 
