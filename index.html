@@ -8,26 +8,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
     <!-- Navegación con altura expandida inicial -->
     <header id="navbar">
         <div class="container nav-container">
-            <div class="logo">
-                <img src="media/Asset%206.svg" alt="Logo Fundación Maggie Paul" class="logo-img">
-                <div>Fundación <span>Maggie Paul</span></div>
-            </div>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
-            <nav id="nav-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#que-hacemos">Programas</a>
-                <a href="#impacto">Impacto</a>
-                <a href="#contacto" class="btn-nav">Contacto</a>
+            <a class="logo" href="#inicio" aria-label="Fundación Maggie Paul, ir al inicio">
+                <img src="media/Asset%206.svg" alt="" class="logo-img">
+                <span class="logo-name">Fundación <strong>Maggie Paul</strong></span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-label="Abrir menú" aria-controls="nav-links" aria-expanded="false"><span aria-hidden="true">☰</span></button>
+            <nav id="nav-links" aria-label="Navegación principal">
+                <a href="index.html" aria-current="page">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="programas.html">Programas</a>
+                <a href="impacto.html">Impacto</a>
+                <a href="galeria.html">Galería</a>
+                <a href="contacto.html" class="btn-nav">Contacto</a>
             </nav>
         </div>
     </header>
 
     <!-- HOME / Hero Section -->
+    <main id="contenido">
     <section id="inicio" class="hero hero-with-bg">
         <div class="container hero-content-left fade-in">
             <h1>Transformamos la solidaridad en <span class="accent-italic">ayuda real</span> para las familias vulnerables.</h1>
@@ -35,7 +38,7 @@
             <div class="hero-buttons">
                 <a href="#ayudar" class="btn btn-primary">Donar Ahora</a>
                 <a href="#ayudar" class="btn btn-secondary">Ser Voluntario</a>
-                <a href="#contacto" class="btn btn-outline-light">Solicitar Ayuda</a>
+                <a href="contacto.html" class="btn btn-outline-light">Solicitar Ayuda</a>
             </div>
             
             <div class="card hero-stats fade-in">
@@ -49,6 +52,7 @@
 
     <!-- PÚBLICOS OBJETIVOS (Mejorado padding horizontal e ícono integrado en móvil/tablet) -->
     <section id="publicos" class="section">
+        <h2 class="sr-only">Formas de participar</h2>
         <div class="container grid-3">
             <div class="card public-card compact-card fade-in">
                 <div class="card-header-inline">
@@ -56,7 +60,7 @@
                     <h3 class="sans-heading">Necesito ayuda</h3>
                 </div>
                 <p>Información sobre nuestros programas y cómo solicitar apoyo para ti o tu comunidad.</p>
-                <a href="#contacto" class="btn-text">Saber más →</a>
+                <a href="contacto.html" class="btn-text">Saber más →</a>
             </div>
             <div class="card public-card featured compact-card fade-in">
                 <div class="card-header-inline">
@@ -72,7 +76,7 @@
                     <h3 class="sans-heading">Quiero ser aliado</h3>
                 </div>
                 <p>Espacio para empresas, organizaciones y fundaciones interesadas en colaborar.</p>
-                <a href="#contacto" class="btn-text">Contactar →</a>
+                <a href="contacto.html" class="btn-text">Contactar →</a>
             </div>
         </div>
     </section>
@@ -165,10 +169,10 @@
             <h2 class="section-title fade-in">Así Ayudamos</h2>
             <p class="subtitle fade-in">Desde 2007 sirviendo a Venezuela. Nuestra ayuda en acción:</p>
             
-            <section class="instagram-section fade-in">
+            <div class="instagram-section fade-in" aria-label="Publicaciones de Instagram">
                 <script src="https://elfsightcdn.com/platform.js" async></script>
                 <div class="elfsight-app-b3740540-395f-4325-8811-3b8ed9b2e963 instagram-embed" data-elfsight-app-lazy></div>
-            </section>
+            </div>
 
             <!-- Lista dividida en 2 líneas exactas y simétricas -->
             <div class="card impacto-lista fade-in mt-4">
@@ -196,7 +200,7 @@
                         <h3 class="sans-heading">Dona</h3>
                     </div>
                     <p>Tu aporte permite llevar alimentos, medicinas y <span class="accent-italic">esperanza</span> a quienes más lo necesitan hoy.</p>
-                    <button class="btn btn-primary mt-2">Hacer donativo</button>
+                    <a class="btn btn-primary mt-2" href="contacto.html">Hacer donativo</a>
                 </div>
                 <div class="card ayuda-card compact-card fade-in">
                     <div class="card-header-inline">
@@ -204,7 +208,7 @@
                         <h3 class="sans-heading">Hazte voluntario</h3>
                     </div>
                     <p>Comparte tu tiempo, conocimiento y talento en nuestras jornadas operativas.</p>
-                    <button class="btn btn-secondary mt-2">Inscribirme</button>
+                    <a class="btn btn-secondary mt-2" href="contacto.html">Inscribirme</a>
                 </div>
                 <div class="card ayuda-card compact-card fade-in">
                     <div class="card-header-inline">
@@ -212,7 +216,7 @@
                         <h3 class="sans-heading">Dona productos</h3>
                     </div>
                     <p>Recibimos: Alimentos no perecederos, Medicinas, Útiles escolares, Ropa e Higiene.</p>
-                    <button class="btn btn-outline mt-2">Ver centros de acopio</button>
+                    <a class="btn btn-outline mt-2" href="contacto.html">Ver centros de acopio</a>
                 </div>
                 <div class="card ayuda-card compact-card fade-in">
                     <div class="card-header-inline">
@@ -220,11 +224,12 @@
                         <h3 class="sans-heading">Empresas Aliadas</h3>
                     </div>
                     <p>Invitamos a empresas y organizaciones a desarrollar programas conjuntos de <span class="accent-italic">impacto social</span>.</p>
-                    <button class="btn btn-outline mt-2">Contactar alianzas</button>
+                    <a class="btn btn-outline mt-2" href="contacto.html">Contactar alianzas</a>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- CONTACTO / FOOTER -->
     <footer id="contacto" class="contact-footer-section">
@@ -254,11 +259,11 @@
                     </ul>
 
                     <div class="footer-social-buttons">
-                        <a href="https://www.instagram.com/fundacion.mp" target="_blank" class="social-pill-btn btn-ig">
+                        <a href="https://www.instagram.com/fundacion.mp" target="_blank" rel="noopener noreferrer" class="social-pill-btn btn-ig" aria-label="Instagram de Fundación Maggie Paul (abre en una pestaña nueva)">
                             <svg class="pill-svg" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2zm5.6-2.4a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1z"/></svg>
                             Instagram
                         </a>
-                        <a href="https://wa.link/q6tnxs" target="_blank" class="social-pill-btn btn-wa">
+                        <a href="https://wa.link/q6tnxs" target="_blank" rel="noopener noreferrer" class="social-pill-btn btn-wa" aria-label="Chatear por WhatsApp (abre en una pestaña nueva)">
                             <svg class="pill-svg" viewBox="0 0 24 24"><path fill="currentColor" d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                             Chat WhatsApp
                         </a>

@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 document.addEventListener("DOMContentLoaded", () => {
     
     const navbar = document.getElementById('navbar');
@@ -13,16 +15,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileBtn = document.getElementById('mobile-menu-btn');
     const navLinks = document.getElementById('nav-links');
 
+    const closeMenu = () => {
+        navLinks.classList.remove('active');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+        mobileBtn.setAttribute('aria-label', 'Abrir menú');
+    };
+
     mobileBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        const isOpen = navLinks.classList.toggle('active');
+        mobileBtn.setAttribute('aria-expanded', String(isOpen));
+        mobileBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
     });
 
     document.querySelectorAll('#nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            if(window.innerWidth <= 768) {
-                navLinks.classList.remove('active');
-            }
+            if(window.innerWidth <= 1100) closeMenu();
         });
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+            closeMenu();
+            mobileBtn.focus();
+        }
+    });
+
+    document.addEventListener('click', (event) => {
+        if (navLinks.classList.contains('active') && !navbar.contains(event.target)) closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1100) closeMenu();
     });
 
     const fadeElements = document.querySelectorAll('.fade-in');
@@ -42,9 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, fadeObserverOptions);
 
-    fadeElements.forEach(element => {
-        fadeObserver.observe(element);
-    });
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) fadeElements.forEach(element => element.classList.add('visible'));
+    else fadeElements.forEach(element => fadeObserver.observe(element));
 
     const counters = document.querySelectorAll('.counter');
     const speed = 100;
